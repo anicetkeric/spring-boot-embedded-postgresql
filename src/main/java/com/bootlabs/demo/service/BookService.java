@@ -22,9 +22,10 @@ public interface BookService {
      * Update entity. Check before if existing data. If data is empty throw Exception
      *
      * @param entity domain
+     * @param id the id of the entity.
      * @return Book
      */
-    Book update(Book entity);
+    Book update(Book entity, Long id);
 
     /**
      * get Book by id. Can be return empty

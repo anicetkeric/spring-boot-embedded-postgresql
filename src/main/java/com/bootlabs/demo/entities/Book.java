@@ -45,7 +45,7 @@ public class Book implements Serializable {
     private Integer page;
 
     @Column(name = "price")
-    private BigDecimal price;
+    private double price;
 
     @ManyToOne
     @JsonIgnoreProperties("books")

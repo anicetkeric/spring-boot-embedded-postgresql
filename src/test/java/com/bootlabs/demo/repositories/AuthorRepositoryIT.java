@@ -12,13 +12,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @PostgresDataJpaTest
 @Sql({"/sql/init.sql"})
-class AuthorRepositoryTest {
+class AuthorRepositoryIT {
 
     @Autowired
     private AuthorRepository authorRepository;
 
     @Test
-    void testEmbeddedDatabase() {
+    void testFindById() {
         Optional<Author> authorOptional = authorRepository.findById(1L);
 
         assertThat(authorOptional).hasValueSatisfying(author -> {

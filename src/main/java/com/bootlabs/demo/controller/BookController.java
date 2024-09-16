@@ -41,17 +41,17 @@ public class BookController {
     }
 
     /**
-     * {@code PUT  /book} : Updates an existing book.
+     * {@code PUT  /book/:id} : Updates an existing book.
      *
      * @param book the book to update.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated book,
      * or with status {@code 400 (Bad Request)} if the book is not valid,
      * or with status {@code 500 (Internal Server Error)} if the book couldn't be updated.
      */
-    @PutMapping()
-    public ResponseEntity<Book> updateBook(@Valid @RequestBody Book book) {
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Book> updateBook(@Valid @RequestBody Book book, @PathVariable("id") Long id) {
         log.debug("REST request to update Book : {}", book);
-        Book result = entityService.update(book);
+        Book result = entityService.update(book, id);
         return ResponseEntity.ok().body(result);
     }
 
