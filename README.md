@@ -11,7 +11,7 @@ Spring Boot Embedded PostgreSQL Database for Testing
 Clone the project
 
 ```bash
-  git https://github.com/anicetkeric/spring-boot-embedded-postgresql.git
+  git clone https://github.com/anicetkeric/spring-boot-embedded-postgresql.git
 ```
 
 ## Documentation
